@@ -99,34 +99,4 @@ def openCam():
     cv2.destroyAllWindows()
 
 
-"""
-def mysqlConnect(name):
-    tableName = "targets"
-    database = mysql.connector.connect(
-        host="127.0.0.1",
-        user="root",
-        password="",
-        database="targets"
-    )
-    pencil = database.cursor()
-    run = checkTable(pencil, tableName)
-    if run == True:
-        pencil.execute(f"CREATE TABLE  {tableName} (NAME VARCHAR(255),TIME VARCHAR(255))")
-        database.commit()
-    else:
-        print("This Table already exist")
-
-
-def checkTable(pencil, tableName):
-    tableList = []
-    x = True
-    for x in pencil.execute("SHOW TABLES"):
-        tableList.append(x)
-    if tableName in tableList:
-        x = False
-    else:
-        x = True
-    return x
-"""
-
 openCam()
